@@ -10,13 +10,13 @@ namespace MVCFilter.Filters
 	{
 		public override void OnActionExecuting(ActionExecutingContext filterContext)
 		{
-			filterContext.HttpContext.Response.Write("action before");
+			filterContext.HttpContext.Response.Write("<p>action result before<p/>");
 			base.OnActionExecuting(filterContext);
 		}
 
 		public override void OnActionExecuted(ActionExecutedContext filterContext)
 		{
-			filterContext.HttpContext.Response.Write("action after");
+			filterContext.HttpContext.Response.Write("<p>action result after<p/>");
 			base.OnActionExecuted(filterContext);
 		}
 	}

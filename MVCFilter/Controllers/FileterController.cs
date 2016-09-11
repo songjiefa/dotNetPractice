@@ -9,7 +9,8 @@ namespace MVCFilter.Controllers
     public class FileterController : Controller
     {
         // GET: Fileter
-		//[Filters.MyActionFilter]
+		[Filters.MyActionFilter]
+		[Filters.MyResultFilter]
         public ActionResult Index()
         {
             return View();
