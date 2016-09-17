@@ -11,7 +11,8 @@ namespace MVCFilter.Controllers
         // GET: Fileter
 		[Filters.MyActionFilter]
 		[Filters.MyResultFilter]
-        public ActionResult Index()
+		[Filters.MyAuthorize]
+		public ActionResult Index()
         {
             return View();
         }

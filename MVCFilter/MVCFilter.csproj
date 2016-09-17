@@ -200,7 +200,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Filters\MyActionFilterAttribute.cs" />
+    <Compile Include="Filters\MyAuthorizeAttribute.cs" />
     <Compile Include="Filters\MyResultFilterAttribute.cs" />
+    <Compile Include="Filters\SkiptAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
