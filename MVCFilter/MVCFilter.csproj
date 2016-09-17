@@ -201,6 +201,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Filters\MyActionFilterAttribute.cs" />
     <Compile Include="Filters\MyAuthorizeAttribute.cs" />
+    <Compile Include="Filters\MyHandleErrorAttribute.cs" />
     <Compile Include="Filters\MyResultFilterAttribute.cs" />
     <Compile Include="Filters\SkiptAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -215,6 +216,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Error.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

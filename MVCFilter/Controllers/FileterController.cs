@@ -16,5 +16,13 @@ namespace MVCFilter.Controllers
         {
             return View();
         }
+
+		public int GetError()
+		{
+			var a = 0;
+			return 1 / a;
+			
+		}
+
     }
 }
