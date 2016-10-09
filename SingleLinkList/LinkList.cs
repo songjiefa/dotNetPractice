@@ -192,6 +192,64 @@ namespace SingleLinkList
 			return tempIndex;
 		}
 
+		public void ReversLinkList()
+		{
+			var position = this.head.Next;
+			var node = new Node<T>();
+			this.head.Next = null;
+
+			while(position!= null)
+			{
+				node = position;
+				position = position.Next;
+				node.Next = this.head.Next;
+				this.head.Next = node;
+			}
+		}
+
+		public static LinkList<String> CreateLinkList()
+		{
+			var result = new LinkList<String>();
+			var input = Console.ReadLine();
+
+			result.Head = new Node<String>();
+			var position = result.Head;
+
+			while (input != "qq")
+			{
+				position.Next = new Node<String>(input);
+				position = position.Next;
+				input = Console.ReadLine();
+			}
+			return result;
+		}
+
+		public static void PrintLinkList(LinkList<T> i_linkList)
+		{
+			var position = i_linkList.Head;
+
+			while (position.Next != null)
+			{
+				if(position.Data == null)
+				{
+					Console.Write("Head");
+				}
+				else
+				{
+					Console.Write("->{0}", position.Data);
+				}
+				
+				position = position.Next;
+			}
+
+			if(position != null)
+			{
+				Console.Write("->{0}", position.Data);
+			}
+		}
+
+		//----------------------------helper----------------------
+
 		private int InternalGetLength()
 		{
 			var position = head;
