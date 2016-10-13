@@ -27,6 +27,10 @@ namespace SingleLinkList
 		{
 			head = null;
 		}
+		public LinkList(Node<T> i_Head)
+		{
+			head = i_Head;
+		}
 
 		void Interface.IListDS<T>.Append(T i_item)
 		{
@@ -246,6 +250,53 @@ namespace SingleLinkList
 			{
 				Console.Write("->{0}", position.Data);
 			}
+
+			Console.WriteLine();
+		}
+
+		public LinkList<T> RemoveSameItem()
+		{
+			var result = new LinkList<T>(new Node<T>());
+			
+
+			var position = this.head.Next;
+
+			
+			var resultPosition = result.Head;
+
+			var node = new Node<T>();
+
+			while(position != null)
+			{
+				node = position;
+				
+
+				var position2 = result.Head;
+				var node2 = new Node<T>();
+				bool isContain = false;
+
+				while(position2 != null)
+				{
+					if(position2.Data != null && position2.Data.ToString() == node.Data.ToString())
+					{
+						isContain = true;
+					}
+					position2 = position2.Next;
+				}
+
+				if (!isContain)
+				{
+					node2.Data = position.Data;
+					
+					resultPosition.Next = node2;
+					resultPosition = resultPosition.Next;
+				}
+
+				position = position.Next;
+
+			}
+
+			return result;
 		}
 
 		//----------------------------helper----------------------

@@ -16,6 +16,8 @@ namespace SingleLinkList
 			
 			LinkList<String>.PrintLinkList(LinkList1);
 
+			LinkList<String>.PrintLinkList(LinkList1.RemoveSameItem());
+
 			Console.ReadKey();
 		}
 	}
