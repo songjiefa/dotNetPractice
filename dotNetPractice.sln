@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCFilter.Tests", "MVCFilte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleLinkList", "SingleLinkList\SingleLinkList.csproj", "{1DDCE554-C262-4BC8-93B4-FD0CEE5DAAFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkList", "DoubleLinkList\DoubleLinkList.csproj", "{F3658C15-50E1-4971-829B-4FE9FEE0B263}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1DDCE554-C262-4BC8-93B4-FD0CEE5DAAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DDCE554-C262-4BC8-93B4-FD0CEE5DAAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DDCE554-C262-4BC8-93B4-FD0CEE5DAAFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3658C15-50E1-4971-829B-4FE9FEE0B263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3658C15-50E1-4971-829B-4FE9FEE0B263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3658C15-50E1-4971-829B-4FE9FEE0B263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3658C15-50E1-4971-829B-4FE9FEE0B263}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
