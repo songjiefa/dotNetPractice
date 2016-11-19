@@ -54,14 +54,14 @@ namespace DoubleLinkList
 		public DNode()
 		{
 			m_data = default(T);
-			m_previous = null;
+			
 			m_next = null;
 		}
 
 		public DNode(T i_value)
 		{
 			m_data = i_value;
-			m_previous = null;
+			
 			m_next = null;
 		}
 

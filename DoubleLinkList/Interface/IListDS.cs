@@ -14,11 +14,11 @@ namespace DoubleLinkList.Interface
 
 		bool IsEmpty();
 
-		bool Append(T i_value);
+		void Append(T i_value);
 
 		bool Insert(int i_Index, T i_value);
 
-		T Delete(int i_Inxdex);
+		T Delete(int i_Index);
 
 		T Locate(T i_Value);
 
