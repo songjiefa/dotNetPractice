@@ -20,7 +20,7 @@ namespace DoubleLinkList.Interface
 
 		T Delete(int i_Index);
 
-		T Locate(T i_Value);
+		int Locate(T i_Value);
 
 		T GetElement(int i_Index);
 	}

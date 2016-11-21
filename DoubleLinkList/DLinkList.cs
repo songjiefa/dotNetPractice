@@ -171,12 +171,39 @@ namespace DoubleLinkList
 
 		public bool IsEmpty()
 		{
-			throw new NotImplementedException();
+			if(m_head == null || m_head.Next == null)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 
-		public T Locate(T i_Value)
+		public Int32 Locate(T i_Value)
 		{
-			throw new NotImplementedException();
+			if (m_head == null || m_head.Next == null )
+			{
+				Console.WriteLine("Link is empty or position is error!");
+				return -1;
+			}
+
+			var point = m_head;
+			var index = 0;
+
+			while(point != null)
+			{
+				if(point.Data.Equals(i_Value))
+				{
+					return index;
+				}
+
+				index++;
+				point = point.Next;
+			}
+
+			return -1;
 		}
 	}
 }
