@@ -25,7 +25,7 @@ namespace DoubleLinkList
 
 		public DLinkList()
 		{
-			m_head = new DNode<T>();
+			m_head = null;
 		}
 		
 		public DLinkList(DNode<T> i_head)
@@ -35,15 +35,14 @@ namespace DoubleLinkList
 
 		public void Append(T i_value)
 		{
+			var addItem = new DNode<T>(i_value);
+
 			if(m_head == null)
 			{
-				m_head = new DNode<T>();
-				m_head.Next = new DNode<T>(i_value);
-				m_head.Next.Previous = m_head;
-
+				m_head = addItem;
 				return;
 			}
-			var pointNode = m_head.Next;
+			var pointNode = m_head;
 			var prePoint = m_head;
 
 			while (pointNode != null)
@@ -52,9 +51,10 @@ namespace DoubleLinkList
 				pointNode = pointNode.Next;
 			}
 
-			pointNode = new DNode<T>(i_value);
+			pointNode = addItem;
 			pointNode.Previous = prePoint;
 			pointNode.Next = null;
+			prePoint.Next = pointNode;
 		}
 
 		public void Clearn()
@@ -129,9 +129,10 @@ namespace DoubleLinkList
 
 			var point = m_head;
 
-			while(point.Next != null)
+			while(point != null)
 			{
 				length++;
+				point = point.Next;
 			}
 
 			return length;

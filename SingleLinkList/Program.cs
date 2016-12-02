@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SingleLinkList.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,17 @@ namespace SingleLinkList
 			
 			LinkList<String>.PrintLinkList(LinkList1);
 
+			IListDS<String> il = LinkList1;
+
+			il.Append("^^^");
+
+			LinkList<String>.PrintLinkList(LinkList1);
+
 			LinkList<String>.PrintLinkList(LinkList1.RemoveSameItem());
 
+			
+
 			Console.ReadKey();
-		}
+		 }
 	}
 }

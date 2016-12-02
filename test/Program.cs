@@ -10,20 +10,10 @@ namespace test
 	{
 		static void Main(string[] args)
 		{
-			var timeNow = DateTime.Now;
-			var UtcTimeNow = DateTime.Now.ToUniversalTime();
-			var localTime = new DateTime(2016, 7, 17, 0, 0, 0, DateTimeKind.Local);
-			var utcTime = new DateTime(2016, 7, 17, 0, 0, 0, DateTimeKind.Utc);
-			var unspecifiedTime = new DateTime(2016, 7, 17, 0, 0, 0, DateTimeKind.Unspecified);
-			var localToUtcTime = new DateTime(2016, 12, 17, 0, 0, 0, DateTimeKind.Local).ToUniversalTime();
-			var utcToUtcTime = new DateTime(2016, 7, 17, 0, 0, 0, DateTimeKind.Utc).ToUniversalTime();
-			Console.WriteLine("localTime:{0}", localTime);
-			Console.WriteLine("utcTime:{0}", utcTime);
-			Console.WriteLine("unspecifiedTime:{0}", unspecifiedTime);
-			Console.WriteLine("localToUtcTime:{0}", localToUtcTime);
-			Console.WriteLine("utcToUtcTime:{0}", utcToUtcTime);
-			Console.WriteLine("timeNow:{0}", timeNow);
-			Console.WriteLine("UtcTimeNow:{0}", UtcTimeNow);
+			Int64 a = 100, b = 100;
+			Console.WriteLine(a == b);
+			Int64 c = 1000, d = 1000;
+			Console.WriteLine(c == d);
 			Console.ReadKey();
 		}
 	}
