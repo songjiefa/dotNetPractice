@@ -13,5 +13,6 @@ namespace Stack.Interface
 		void Clear();
 		void Push(T i_item);
 		T Pop();
+		T GetTop();
 	}
 }
