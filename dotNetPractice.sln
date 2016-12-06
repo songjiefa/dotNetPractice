@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkList", "DoubleLin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{BCC1B7D7-D5A1-4E35-A136-7AABABFBBB81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{88F5F7DB-51DC-47C9-A88A-7715E3425201}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BCC1B7D7-D5A1-4E35-A136-7AABABFBBB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCC1B7D7-D5A1-4E35-A136-7AABABFBBB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCC1B7D7-D5A1-4E35-A136-7AABABFBBB81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F5F7DB-51DC-47C9-A88A-7715E3425201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F5F7DB-51DC-47C9-A88A-7715E3425201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F5F7DB-51DC-47C9-A88A-7715E3425201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F5F7DB-51DC-47C9-A88A-7715E3425201}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
