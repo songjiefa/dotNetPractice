@@ -28,7 +28,31 @@ namespace Stack
 				Console.WriteLine(ss.Pop());
 			}
 
+			Console.WriteLine(Conversion(10, 2));
+
 			Console.ReadKey();
 		}
+
+		public static int Conversion(int i_integer10,int i_ary)
+		{
+			var n = i_integer10;
+			var stack = new SeqStack<int>(99999);
+			while(n != 0)
+			{				
+				stack.Push(n % i_ary);
+				n = n / i_ary;Stack<Task>
+			}
+			
+			var result = 0;
+			var str = string.Empty;
+			while (!stack.IsEmpty())
+			{
+				str += stack.Pop().ToString();
+			}
+
+			result = Int32.Parse(str);
+
+			return result;
+		} 
 	}
 }
