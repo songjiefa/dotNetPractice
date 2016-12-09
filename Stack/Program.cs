@@ -40,7 +40,7 @@ namespace Stack
 			while(n != 0)
 			{				
 				stack.Push(n % i_ary);
-				n = n / i_ary;Stack<Task>
+				n = n / i_ary;
 			}
 			
 			var result = 0;
