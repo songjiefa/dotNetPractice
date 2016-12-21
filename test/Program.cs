@@ -14,6 +14,14 @@ namespace test
 			Console.WriteLine(a == b);
 			Int64 c = 1000, d = 1000;
 			Console.WriteLine(c == d);
+			
+
+			for(int i = 10, j = 1; 
+				j > 0 && i > 0; 
+				i++, j--)
+			{
+				Console.WriteLine("_");
+			}
 			Console.ReadKey();
 		}
 	}
