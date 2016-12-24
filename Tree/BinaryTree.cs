@@ -58,20 +58,24 @@ namespace BinaryTrees
 			return i_node.Parent;
 		}
 
-		public void InsertToLeftChild(T i_data, Node<T> i_node)
+		public Node<T> InsertToLeftChild(T i_data, Node<T> i_node)
 		{
 			var insertNode = new Node<T>(i_data);
 			insertNode.LeftChild = i_node.LeftChild;
 			insertNode.Parent = i_node;
 			i_node.LeftChild = insertNode;
+
+			return insertNode;
 		}
 
-		public void InsertToRightChild(T i_data,Node<T> i_node)
+		public Node<T> InsertToRightChild(T i_data,Node<T> i_node)
 		{
 			var insertNode = new Node<T>(i_data);
 			insertNode.RightChild = i_node.RightChild;
 			insertNode.Parent = i_node;
 			i_node.RightChild = insertNode;
+
+			return insertNode;
 		}
 
 		public Node<T> DeleteLeftChild(Node<T> i_node)

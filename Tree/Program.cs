@@ -10,9 +10,25 @@ namespace BinaryTrees
 	{
 		static void Main(string[] args)
 		{
+			/*
+					1
+			2				3
+		4		5		6		7
+			 */
+			BinaryTree<int> bTree = new BinaryTree<int>(1);
+			var leftChild = bTree.InsertToLeftChild(2, bTree.GetRoot());
+			var rightChild = bTree.InsertToRightChild(3, bTree.GetRoot());
+
+			bTree.InsertToLeftChild(4, leftChild);
+			bTree.InsertToRightChild(5, leftChild);
+			bTree.InsertToLeftChild(6, rightChild);
+			bTree.InsertToRightChild(7, rightChild);
+
+			LevelOrder(bTree.GetRoot());
+			Console.ReadKey();
 		}
 
-		public void PreOrderDLR(Node<int> i_node)
+		public static void PreOrderDLR(Node<int> i_node)
 		{
 			if(i_node == null)
 			{
@@ -25,31 +41,31 @@ namespace BinaryTrees
 			PreOrderDLR(i_node.RightChild);
 		}
 
-		public void PreOrderLDR(Node<int> i_node)
+		public static void PreOrderLDR(Node<int> i_node)
 		{
 			if (i_node == null)
 			{
 				return;
 			}
 
-			PreOrderDLR(i_node.LeftChild);
+			PreOrderLDR(i_node.LeftChild);
 			Console.WriteLine("{0}", i_node.Data);
-			PreOrderDLR(i_node.RightChild);
+			PreOrderLDR(i_node.RightChild);
 		}
 
-		public void PreOrderLRD(Node<int> i_node)
+		public static void PreOrderLRD(Node<int> i_node)
 		{
 			if (i_node == null)
 			{
 				return;
 			}
 
-			PreOrderDLR(i_node.LeftChild);			
-			PreOrderDLR(i_node.RightChild);
+			PreOrderLRD(i_node.LeftChild);
+			PreOrderLRD(i_node.RightChild);
 			Console.WriteLine("{0}", i_node.Data);
 		}
 
-		public void LevelOrder(Node<int> i_root)
+		public static void LevelOrder(Node<int> i_root)
 		{
 			var queue = new Queue<Node<int>>();
 
