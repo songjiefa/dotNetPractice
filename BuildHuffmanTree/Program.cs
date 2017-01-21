@@ -10,6 +10,8 @@ namespace BuildHuffmanTree
 	{
 		static void Main(string[] args)
 		{
+			HuffmanTree<int> hm = new HuffmanTree<int>(4);
+			hm.Create();
 		}
 	}
 }
