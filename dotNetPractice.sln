@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTrees", "Tree\BinaryT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildHuffmanTree", "BuildHuffmanTree\BuildHuffmanTree.csproj", "{1AD1CE32-B298-4D8F-B84F-A6CB370286BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnDirectedGraph", "UnDirectedGraph\UnDirectedGraph.csproj", "{D4DE2D29-E452-4716-9F0F-EB22AE0880A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{1AD1CE32-B298-4D8F-B84F-A6CB370286BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AD1CE32-B298-4D8F-B84F-A6CB370286BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AD1CE32-B298-4D8F-B84F-A6CB370286BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4DE2D29-E452-4716-9F0F-EB22AE0880A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4DE2D29-E452-4716-9F0F-EB22AE0880A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4DE2D29-E452-4716-9F0F-EB22AE0880A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4DE2D29-E452-4716-9F0F-EB22AE0880A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

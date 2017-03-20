@@ -10,19 +10,78 @@ namespace test
 	{
 		static void Main(string[] args)
 		{
-			Int64 a = 100, b = 100;
-			Console.WriteLine(a == b);
-			Int64 c = 1000, d = 1000;
-			Console.WriteLine(c == d);
-			
+			DateTime d1 = DateTime.Now;
+			DateTime d2 = DateTime.Now.AddMinutes(1);
+			Console.WriteLine(d1);
+			Console.WriteLine(d2);
 
-			for(int i = 10, j = 1; 
-				j > 0 && i > 0; 
-				i++, j--)
-			{
-				Console.WriteLine("_");
-			}
+			//testYield().ToList().ForEach(c => Console.WriteLine(c));
+			var te = testYield(2);
+
+			var query = te.Where(c => c.Name == "end").FirstOrDefault();
+
+			te = testYield(5);
+
+			query = te.Where(c => c.Name == "end").FirstOrDefault();
+
 			Console.ReadKey();
+		}
+
+		static IEnumerable<Person> testYield(int i)
+		{
+			//int[] arrs = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+			//foreach(var arr in arrs)
+			//{
+			//	yield return arr;
+			//}
+
+			Person[] arrs =
+			{
+				new Person() { Name=i.ToString(),Age=i},
+				new Person() { Name=i.ToString(),Age=i},
+				new Person() { Name=i.ToString(),Age=i},
+				new Person() { Name=i.ToString(),Age=i},
+				new Person() {Name="end" ,Age =i }
+			};
+
+			foreach (var arr in arrs)
+			{
+				yield return arr;
+			}
+		}
+
+
+	}
+
+	class Person
+	{
+		private String m_name;
+		private Int32 m_age;
+
+		public string Name
+		{
+			get
+			{
+				return m_name;
+			}
+
+			set
+			{
+				m_name = value;
+			}
+		}
+
+		public int Age
+		{
+			get
+			{
+				return m_age;
+			}
+
+			set
+			{
+				m_age = value;
+			}
 		}
 	}
 }
