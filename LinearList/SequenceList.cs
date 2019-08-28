@@ -6,7 +6,20 @@ namespace LinearList
 {
     class SequenceList<T> : IListDS<T>
     {
-        private T[] m_list = new T[4];
+        private T[] m_data = new T[4];
+        private int m_maxSize;
+        private int lastIndex;
+
+        public T this[int index]
+        {
+            get { return m_data[index]; }
+            set { m_data[index] = value; }
+        }
+
+        public SequenceList()
+        {
+
+        }
         public void Add(T i_item)
         {
             throw new NotImplementedException();
