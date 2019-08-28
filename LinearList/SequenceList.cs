@@ -6,7 +6,7 @@ namespace LinearList
 {
     class SequenceList<T> : IListDS<T>
     {
-        private T[] m_data = new T[4];
+        private T[] m_data;
         private int m_maxSize;
         private int lastIndex;
 
@@ -17,6 +17,11 @@ namespace LinearList
         }
 
         public SequenceList()
+        {
+            m_data = new T[4];
+        }
+
+        public SequenceList(int i_)
         {
 
         }
